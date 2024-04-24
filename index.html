@@ -4,7 +4,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <div class="Page" id="page0">
+        <img src="res/0.png" class="background" />
+        <button id="StartButton">Start Learning</button>
+    </div>
+
+    <div class="Page" id="page1">
+        <img src="res/1.png" class="background" />
+
+        <div class="row1">
+            <button>Baybayin</button>
+            <button>Cebuano</button>
+            <button>Batangeño</button>
+        </div>
+        <div class="row2">
+            <span></span>
+            <button>Ilocano</button>
+            <button>Waray</button>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="Page ActivePage" id="page2">
+        <img src="res/2.png" class="background" />
+
+        <div class="row1">
+            <button text="I have zero knowledge with the languange">BEGINNER<br></button>
+            <button text="I know some words and can understand them">ADVANCED<br></button>
+            <button text="I can create sentences with the languange">EXPERT<br></button>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

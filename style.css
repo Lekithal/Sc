@@ -1,0 +1,162 @@
+* {
+    user-select: none;
+}
+
+.invisible
+{
+    opacity: none;
+}
+
+body 
+{
+    margin: 0px;
+    overflow: hidden;
+}
+
+img.background
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#StartButton
+{
+    transition: 0.2s;
+    position: absolute;
+    left: 50%;
+    top: 69%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 150px;
+    border-radius: 999999px;
+    background: #e7ddc3;
+    border: none;
+    font-size: large;
+    font-family: 'Brush Script MT', cursive;
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75);
+}
+
+#StartButton:hover
+{
+    font-size: larger;
+}
+
+#StartButton:active
+{
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) inset;
+}
+
+.Page
+{
+    display: none;
+    opacity: 0;
+}
+
+div.ActivePage
+{
+    display: inherit;
+    opacity: 1;
+}
+
+#page1 div
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#page1 div.row1
+{
+    margin-top: 20%;
+}
+
+div.row2
+{
+    margin-top: 4%;
+    width: 80%;
+}
+
+#page1 button 
+{
+    transition: 0.2s;
+    background: rgba(231, 221, 195, 0.75);
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    border: 2px solid #c1b48c;
+    font-size: xx-large;
+    font-family: 'Brush Script MT', cursive;
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75);
+}
+
+#page1 button:hover
+{
+    font-size: 35px;
+}
+
+#page1 button:active
+{
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) inset;
+}
+
+#page2 .row1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#page2 .row1 button
+{
+    transition: 0.2s;
+    top: 0px;
+    width: 20%;
+    height: 40%;
+    margin: 5%;
+    font-size: 50px;
+    background: #e7ddc3;
+    border: none;
+    font-family: 'Brush Script MT', cursive;
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    white-space: pre-line;
+    z-index: 2;
+}
+
+#page2 .row1 button:active
+{
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) inset;
+}
+
+#page2 .row1 button:hover
+{
+    font-size: 55px;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 250%);
+    }
+}
+
+#page2 .row1 button:hover::after
+{
+    width: 20%;
+    content: attr(text);
+    font-size: xx-large;
+    position: absolute;
+    transform: translate(-50%, 250%);
+    animation: slide 0.5s ease 1;
+    opacity: 1;
+}
